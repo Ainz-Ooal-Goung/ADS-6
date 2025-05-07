@@ -7,22 +7,22 @@
 template<typename T>
 class TPQueue {
     private:
-    struct Node {
-      T data;
-      Node* next;
-      explicit Node(const T& d) : data(d), next(nullptr) {}
-    };
+        struct Node {
+          T data;
+          Node* next;
+          explicit Node(const T& d) : data(d), next(nullptr) {}
+        };
 
     Node* head;
 
     public:
-    TPQueue() : head(nullptr) {}
-    ~TPQueue() {
-      while (head) {
-        Node* tmp = head;
-        head = head->next;
-        delete tmp;
-      }
+        TPQueue() : head(nullptr) {}
+        ~TPQueue() {
+          while (head) {
+            Node* tmp = head;
+            head = head->next;
+            delete tmp;
+          }
     }
 
     TPQueue(const TPQueue&) = delete;
