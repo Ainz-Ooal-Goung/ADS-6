@@ -6,7 +6,7 @@
 
 template<typename T>
 class TPQueue {
-   private:
+    private:
     struct Node {
       T data;
       Node* next;
@@ -15,7 +15,7 @@ class TPQueue {
 
     Node* head;
 
-   public:
+    public:
     TPQueue() : head(nullptr) {}
     ~TPQueue() {
       while (head) {
